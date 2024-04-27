@@ -5,7 +5,7 @@ export const Input = styled(AntdInput)<{ $width?: string; $isError?: boolean }>`
   border-radius: ${({ theme }) => theme.borderRadius.small};
   max-width: ${({ $width }) => $width || '268px'};
   padding: ${({ theme }) => theme.indents.small || '268px'};
-  font-size: ${({ theme }) => theme.fontSize.small};
+  font-size: ${({ theme }) => theme.fontSize.s};
   line-height: 1;
   border: 1px solid ${({ theme }) => theme.colors.gray[200]};
   height: 48px;

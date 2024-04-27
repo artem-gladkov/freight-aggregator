@@ -1,7 +1,7 @@
 import { Order } from '../types';
 import { httpClient } from '../../../shared/api';
 
-export interface IFetchOrdersParams {
+export interface FetchOrdersParams {
   /**
    * Timestamp
    */
@@ -12,7 +12,7 @@ export interface IFetchOrdersParams {
 }
 
 class OrderApi {
-  fetchOrders = async (params?: IFetchOrdersParams): Promise<Order[]> => {
+  fetchOrders = async (params?: FetchOrdersParams): Promise<Order[]> => {
     return httpClient('/orders', { params }).then((resp) => resp.data);
   };
 }

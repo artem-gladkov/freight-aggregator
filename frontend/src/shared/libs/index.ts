@@ -1,1 +1,1 @@
-export * from './formatNumber.ts';
+export * from './format-number.ts';

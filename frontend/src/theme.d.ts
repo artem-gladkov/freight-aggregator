@@ -24,9 +24,10 @@ declare module 'styled-components' {
       medium: '24px';
     };
     fontSize: {
-      small: '14px';
-      medium: '16px';
-      big: '20px';
+      s: '14px';
+      m: '16px';
+      l: '18px';
+      xl: '20px';
     };
   }
 }

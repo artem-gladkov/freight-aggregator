@@ -8,12 +8,12 @@ export interface DestinationProps {
 
 const City = styled.span`
   font-weight: 500;
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.fontSize.l};
   line-height: 28px;
 `;
 
 const Region = styled.span`
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.fontSize.m};
   line-height: 28px;
   color: ${(props) => props.theme.colors.gray[200]};
 `;
@@ -22,12 +22,10 @@ const DestinationStyled = styled.div`
   min-width: max-content;
 `;
 
-export const Destination: FC<DestinationProps> = ({ city, region }) => {
-  return (
-    <DestinationStyled>
-      <City>{city}</City>
-      &nbsp;
-      <Region>{region}</Region>
-    </DestinationStyled>
-  );
-};
+export const Destination: FC<DestinationProps> = ({ city, region }) => (
+  <DestinationStyled>
+    <City>{city}</City>
+    &nbsp;
+    <Region>{region}</Region>
+  </DestinationStyled>
+);

@@ -5,7 +5,7 @@ export enum EFormOrdersSearchNames {
   loadingDate = 'loadingDate',
 }
 
-export const FORM_NAMES = [
+export const FORM_SEARCH_ORDERS_NAMES = [
   EFormOrdersSearchNames.to,
   EFormOrdersSearchNames.from,
   EFormOrdersSearchNames.loadingDate,

@@ -1,10 +1,10 @@
 import { Container, Space } from '../shared/ui';
-import { OrdersList } from '../widgets/widget-orders';
-import { CardOrdersSearch } from '../features/find-order';
+import { FormSearchOrders } from '../features/find-orders';
 import { useQuery } from '@tanstack/react-query';
-import { Order } from '../entities/order/types';
+import type { Order } from '../entities/order/types';
 import { orderApi } from '../entities/order/api';
 import { useSearchParams } from 'react-router-dom';
+import { OrdersList } from '../entities/order/ui';
 
 export const HomePage = () => {
   const [searchParams] = useSearchParams();
@@ -27,7 +27,7 @@ export const HomePage = () => {
   return (
     <Container>
       <Space direction="vertical" size={16}>
-        <CardOrdersSearch isDisableSubmit={isFetching} />
+        <FormSearchOrders isDisableSubmit={isFetching} />
         <OrdersList orders={orders} isLoading={isFetching} isEmpty={isEmptyList} />
       </Space>
     </Container>

@@ -10,7 +10,7 @@ export const DatePicker = styled(AntdDatePicker)<{ $isError?: boolean }>`
   }};
   input {
     font-weight: 500;
-    font-size: ${({ theme }) => theme.fontSize.small} !important;
+    font-size: ${({ theme }) => theme.fontSize.s} !important;
   }
 
   ${({ size }) => {
