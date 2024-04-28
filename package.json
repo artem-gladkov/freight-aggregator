@@ -11,14 +11,15 @@
     "dev": "env-cmd -f ./.env.development concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
     "dev:frontend": "npm run dev --prefix frontend",
     "dev:backend": "npm run dev --prefix backend",
-    "install:frontend": "npm install --prefix frontend",
-    "install:backend": "npm install --prefix backend",
-    "install": "concurrently \"npm run install:frontend\" \"npm run install:backend\""
+    "install": "concurrently \"npm install --prefix frontend\" \"npm install --prefix backend\""
   },
   "author": "Artem Gladkov <artem.gladkovw@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^8.2.2",
     "env-cmd": "^10.1.0"
+  },
+  "engines": {
+    "node": "20.11.0"
   }
 }

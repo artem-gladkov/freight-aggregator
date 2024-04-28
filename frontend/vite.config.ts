@@ -9,19 +9,5 @@ export default ({ mode }: UserConfig) => {
 
   return defineConfig({
     plugins: [react(), svgr()],
-    server: {
-      proxy: {
-        '/api': {
-          target: process.env.VITE_API_URL,
-        },
-      },
-    },
-    preview: {
-      proxy: {
-        '/api': {
-          target: process.env.VITE_API_URL,
-        },
-      },
-    },
   });
 };
